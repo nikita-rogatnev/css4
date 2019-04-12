@@ -34,10 +34,8 @@
 </div>
 
 <script>
-    "use strict";
     const toggleSwitch = document.querySelector('.switcher__checkbox');
-
-    function switchTheme(e) {
+    const switchTheme = (e) => {
         if (e.target.checked) {
             document.body.setAttribute('data-theme', 'dark');
         } else {
