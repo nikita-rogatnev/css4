@@ -1,0 +1,75 @@
+:root {
+    --color-primary: white;
+    --color-secondary: black;
+    --color-accent: red;
+
+    --global-font-color: var(--color-secondary);
+    --global-bg-color: var(--color-primary);
+    --global-border-color: var(--color-primary);
+
+    --header-bg-color: var(--global-bg-color);
+    --main-bg-color: var(--global-bg-color);
+    --footer-bg-color: var(--global-bg-color);
+    --switcher-bg-color: var(--color-accent);
+}
+
+[data-theme="dark"] {
+    --color-primary: black;
+    --color-secondary: white;
+    --color-accent: green;
+
+    --global-font-color: var(--color-secondary);
+    --global-bg-color: var(--color-primary);
+    --global-border-color: var(--color-primary);
+
+    --header-bg-color: var(--global-bg-color);
+    --main-bg-color: var(--global-bg-color);
+    --footer-bg-color: var(--global-bg-color);
+    --switcher-bg-color: var(--color-accent);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--global-font-color);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--header-bg-color);
+    border: 1px solid var(--global-border-color);
+    min-height: 50px;
+}
+
+.main {
+    background-color: var(--header-bg-color);
+    border: 1px solid var(--global-border-color);
+    flex-grow: 1;
+}
+
+.switcher__button {
+    background: var(--switcher-bg-color);
+    color: var(--global-font-color);
+    border: 0;
+}
+
+.footer {
+    background-color: var(--footer-bg-color);
+    border: 1px solid var(--global-border-color);
+    min-height: 50px;
+}

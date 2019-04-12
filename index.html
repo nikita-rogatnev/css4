@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>CSS4</title>
+</head>
+<body>
+<div class="app">
+    <header class="header">
+        <div class="header__container">
+            Header
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <section class="switcher">
+                <label class="switcher__checkbox">
+                    Switch theme color
+                    <input type="checkbox" id="checkbox"/>
+                </label>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            Footer
+        </div>
+    </footer>
+</div>
+
+<script>
+    "use strict";
+    const toggleSwitch = document.querySelector('.switcher__checkbox');
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+        }
+    };
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+</body>
